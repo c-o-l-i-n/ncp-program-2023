@@ -43,12 +43,12 @@ Players find a page in the program with 8 QR codes. 7 lead to a [Rick Roll](http
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) v16.8 or higher
+- [Node.js](https://nodejs.org/) v14.6.0 or higher
 
 ### Install
 
 ```sh
-git clone https://github.com/c-o-l-i-n/ncp-program-2023
+git clone https://github.com/c-o-l-i-n/ncp-program-2023.git
 cd ncp-program-2023
 npm install
 ```
