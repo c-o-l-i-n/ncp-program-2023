@@ -21,7 +21,7 @@
 <br />
 
 <p align="center">
-  <a href="https://potl.uk">
+  <a href="https://www.northcantonplayhouse.com/">
     <img alt="North Canton Playhouse Logo" width="256" height="256" src="public/images/ncp-color.svg" />
   </a>
 </p>
