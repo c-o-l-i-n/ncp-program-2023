@@ -9,12 +9,16 @@ $family-primary: var(--app-font);
 
 // ------------------ Custom Styles ------------------
 
+html, body {
+  height: 100%
+}
+
 body {
   @extend .has-background-primary;
 }
 
 #__next {
-  min-height: 100vh;
+  min-height: 100%;
 
   @extend .is-flex;
   @extend .is-flex-grow-1;

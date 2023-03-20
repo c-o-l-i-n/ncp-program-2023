@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import Image from 'next/image'
+import Footer from './Footer'
 
 export default function Home (): ReactElement {
   return (
@@ -18,6 +19,7 @@ export default function Home (): ReactElement {
         <p>Do you have what it takes to solve the puzzles and win the prize?</p>
         <h3>Scan the QR codes in the program to get started!</h3>
       </main>
+      <Footer />
     </>
   )
 }

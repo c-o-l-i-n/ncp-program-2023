@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Layout from '@/components/Layout'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRouter } from 'next/router'
@@ -17,37 +17,33 @@ export default function Transition (): ReactElement {
   const step = typeof router.query.step === 'string' ? router.query.step : '0'
 
   return (
-    <>
-      <Navbar />
+    <Layout>
+      <h2>Great Job!</h2>
 
-      <main>
-        <h2>Great Job!</h2>
+      <div className='is-flex is-justify-content-center'>
+        <ConfettiExplosion
+          force={0.4}
+          duration={2200}
+          particleCount={100}
+          width={400}
+        />
+      </div>
 
-        <div className='is-flex is-justify-content-center'>
-          <ConfettiExplosion
-            force={0.4}
-            duration={2200}
-            particleCount={100}
-            width={400}
-          />
-        </div>
+      <p className='mb-5'>{stepMessage[parseInt(step)]}</p>
 
-        <p className='mb-5'>{stepMessage[parseInt(step)]}</p>
-
-        <div className='is-flex is-justify-content-end'>
-          <button
-            className='button is-primary right'
-            onClick={() => {
-              void router.replace(`/${step}`, new Date().getTime().toString())
-            }}
-          >
-            <span>Step {step}</span>
-            <span className='icon'>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </span>
-          </button>
-        </div>
-      </main>
-    </>
+      <div className='is-flex is-justify-content-end'>
+        <button
+          className='button is-primary right'
+          onClick={() => {
+            void router.replace(`/${step}`, new Date().getTime().toString())
+          }}
+        >
+          <span>Step {step}</span>
+          <span className='icon'>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </span>
+        </button>
+      </div>
+    </Layout>
   )
 }
