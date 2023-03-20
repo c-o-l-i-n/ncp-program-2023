@@ -15,6 +15,7 @@ export default function Navbar (): ReactElement {
             alt='Logo'
             width={36}
             height={36}
+            priority
           />
         </div>
         <span className='navbar-item is-size-3 has-text-weight-bold m-1'>
