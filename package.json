@@ -1,0 +1,48 @@
+{
+  "name": "ncp-program-2023",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint && ts-standard",
+    "lint-fix": "ts-standard --fix"
+  },
+  "author": {
+    "name": "Colin A. Williams",
+    "email": "colin@colinaw.com"
+  },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals",
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
+  },
+  "ts-standard": {
+    "ignore": [
+      "next-env.d.ts"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@types/seedrandom": "^3.0.5",
+    "bulma": "^0.9.4",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-confetti-explosion": "^2.0.2",
+    "react-dom": "18.2.0",
+    "sass": "^1.59.3",
+    "seedrandom": "^3.0.5",
+    "ts-standard": "^12.0.2",
+    "typescript": "5.0.2"
+  }
+}

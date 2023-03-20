@@ -1,0 +1,53 @@
+// ---------------------- Bulma ----------------------
+
+$primary: #14a2d0;
+$warning: #d18429;
+
+$family-primary: var(--app-font);
+
+@import '~bulma/bulma.sass';
+
+// ------------------ Custom Styles ------------------
+
+body {
+  @extend .has-background-primary;
+}
+
+#__next {
+  min-height: 100vh;
+
+  @extend .is-flex;
+  @extend .is-flex-grow-1;
+  @extend .is-flex-direction-column;
+}
+
+.navbar {
+  z-index: unset;
+
+  .navbar-item {
+    img {
+      max-height: unset;
+    }
+  }
+}
+
+main {
+  @extend .p-5;
+  @extend .mb-0;
+  @extend .is-flex-grow-1;
+  @extend .has-background-white;
+  @extend .content;
+}
+
+button, h1, h2 {
+  @extend .has-text-weight-bold
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pink {
+  font-weight: bold;
+  color: magenta;
+}
