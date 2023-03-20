@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout'
-import Navbar from '@/components/Navbar'
 import { useRouter } from 'next/router'
 import { ChangeEvent, ReactElement, useState } from 'react'
 
