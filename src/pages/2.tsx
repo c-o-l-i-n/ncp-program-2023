@@ -24,7 +24,8 @@ export default function Singer (): ReactElement {
     <Layout>
       <h2>Step 2</h2>
 
-      <p>The NCP is full of nice people. Never a mean girl in sight! On Wednesdays,
+      <p>
+        The NCP is full of nice people. Never a mean girl in sight! On Wednesdays,
         we only listen to one <span className='pink'>colorful</span> singer.
       </p>
       <p>What day was this singer born?</p>
