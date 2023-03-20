@@ -1,6 +1,6 @@
 import Home from '@/components/Home'
 import { useRouter } from 'next/router'
-import { ReactElement, useEffect, useRef } from 'react'
+import { ReactElement } from 'react'
 import seedrandom from 'seedrandom'
 
 const ids = [
@@ -36,15 +36,15 @@ export default function Index (): ReactElement | undefined {
   if (typeof window !== 'object') {
     return <Home />
   }
-  
+
   // avoid blue flash (body is blue, main is white)
   if (!router.isReady) {
-    return <main></main>
+    return <main />
   }
 
   // go to step 2 if correct QR code scan
   if (router.query.id === correctId) {
-    void router.replace(`transition?step=2`, new Date().getTime().toString())
+    void router.replace('transition?step=2', new Date().getTime().toString())
     return
   }
 

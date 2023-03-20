@@ -6,14 +6,14 @@ export default function Singer (): ReactElement {
   const router = useRouter()
   const [date, setDate] = useState('')
 
-  function submit () {
+  function submit (): void {
     const correctDate = '1979-09-08'
 
     if (date === correctDate) {
-      router.replace(`transition?step=3`, new Date().getTime().toString())
+      void router.replace('transition?step=3', new Date().getTime().toString())
       return
     }
-    
+
     const guess = parseInt(date.replace(/-/g, ''))
     const correct = parseInt(correctDate.replace(/-/g, ''))
 
@@ -34,7 +34,7 @@ export default function Singer (): ReactElement {
 
         <input
           className='input mb-5'
-          type="date"
+          type='date'
           onChange={(e: ChangeEvent<HTMLInputElement>) => setDate(e.target.value)}
         />
 
@@ -49,6 +49,5 @@ export default function Singer (): ReactElement {
         </div>
       </main>
     </>
-  ) 
+  )
 }
- 
