@@ -33,10 +33,10 @@ const steps: Step[] = [
           The NCP&apos;s summer musical for 2023 is <strong>Mean Girls</strong>!
         </p>
         <p>
-          Anyone who has seen Mean Girls knows that on Wednesdays, we
-          wear <span className='pink'>pink</span>. And since you&apos;re so
+          Anyone who has seen Mean Girls knows that on Wednesdays, we wear
+          {' '}<span className='pink'>pink</span>. And since you&apos;re so
           clever, you know that the singer <span className='pink'>P!NK</span>
-          was born on September 8th, 1979.
+          {' '}was born on September 8th, 1979.
         </p>
       </>
     )
