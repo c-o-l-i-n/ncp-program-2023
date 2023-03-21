@@ -4,14 +4,14 @@
 
 
 <div align="center">
-  <a href="https://github.com/c-o-l-i-n/ncp-program-2023/actions/workflows/deploy.yml">
-    <img alt="Github Build and Deployment Status" src="https://img.shields.io/github/actions/workflow/status/c-o-l-i-n/ncp-program-2023/deploy.yml?branch=main&logo=github&logoWidth=12">
+  <a href="https://github.com/c-o-l-i-n/ncp-program-riddle/actions/workflows/deploy.yml">
+    <img alt="Github Build and Deployment Status" src="https://img.shields.io/github/actions/workflow/status/c-o-l-i-n/ncp-program-riddle/deploy.yml?branch=main&logo=github&logoWidth=12">
   </a>
   <a href="https://ncp.rocks">
     <img alt="Website Monitoring Status" src="https://img.shields.io/website?url=https%3A%2F%2Fncp.rocks">
   </a>
   <a href="LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/c-o-l-i-n/ncp-program-2023" />
+    <img alt="License" src="https://img.shields.io/github/license/c-o-l-i-n/ncp-program-riddle" />
   </a>
   <a href="https://standardjs.com">
     <img alt="Code Style: TS Standard" src="https://img.shields.io/badge/code%20style-ts--standard-blue?logo=typescript&logoColor=white&logoWidth=12" />
@@ -48,8 +48,8 @@ Players find a page in the program with 8 QR codes. 7 lead to a [Rick Roll](http
 ### Install
 
 ```sh
-git clone https://github.com/c-o-l-i-n/ncp-program-2023.git
-cd ncp-program-2023
+git clone https://github.com/c-o-l-i-n/ncp-program-riddle.git
+cd ncp-program-riddle
 npm install
 ```
 
@@ -75,7 +75,7 @@ Github: [@c-o-l-i-n](https://github.com/c-o-l-i-n)
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/c-o-l-i-n/ncp-program-2023/issues).
+Contributions, issues, and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/c-o-l-i-n/ncp-program-riddle/issues).
 
 ## License
 
