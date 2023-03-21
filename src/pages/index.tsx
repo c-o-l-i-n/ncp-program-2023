@@ -29,7 +29,7 @@ const correctId = ids[Math.floor(rng() * ids.length)]
 
 console.log('Correct ID:', correctId)
 
-export default function Index (): ReactElement | undefined {
+export default function IndexPage (): ReactElement | undefined {
   const router = useRouter()
 
   // if server-side rendering

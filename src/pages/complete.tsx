@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { ReactElement } from 'react'
 import ConfettiExplosion from 'react-confetti-explosion'
 
-export default function TransitionPage (): ReactElement {
+export default function CompletePage (): ReactElement {
   const router = useRouter()
 
   const stepNumber = parseInt(typeof router.query.step === 'string' ? router.query.step : '0')
