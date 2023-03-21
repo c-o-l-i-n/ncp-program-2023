@@ -42,9 +42,9 @@ export default function Index (): ReactElement | undefined {
     return <main />
   }
 
-  // go to step 2 if correct QR code scan
+  // complete step 1 (0 because of 0-index) if correct QR code scan
   if (router.query.id === correctId) {
-    void router.replace('transition?step=2', new Date().getTime().toString())
+    void router.replace('complete?step=0', new Date().getTime().toString())
     return
   }
 
@@ -54,5 +54,5 @@ export default function Index (): ReactElement | undefined {
   }
 
   // Rick Roll if incorrect QR code scan
-  void router.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ', undefined, { shallow: true })
+  void router.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
 }
