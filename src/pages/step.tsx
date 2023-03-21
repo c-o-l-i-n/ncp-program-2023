@@ -27,7 +27,7 @@ export default function StepPage (): ReactElement {
 
       <input
         className='input mb-5'
-        type={step.inputType}
+        type={step.inputType ?? 'text'}
         inputMode={step.inputType === 'number' ? 'numeric' : undefined}
         onChange={e => setGuess(e.target.value.toUpperCase().trim())}
         onKeyPress={e => {

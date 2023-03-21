@@ -4,7 +4,7 @@ interface Step {
   question: ReactElement
   answer: string
   answerOnlyNeedsToContain?: boolean
-  inputType: HTMLInputTypeAttribute
+  inputType?: HTMLInputTypeAttribute
   completionMessage: string | ReactElement
 }
 
@@ -12,7 +12,6 @@ const steps: Step[] = [
   {
     question: <>(QR Code scan in the program)</>,
     answer: '',
-    inputType: '',
     completionMessage: "You found the correct QR code! I'm glad you never gave it up! 😉"
   },
   {
@@ -49,7 +48,6 @@ const steps: Step[] = [
       </>
     ),
     answer: 'EUGENE CERNAN',
-    inputType: 'text',
     completionMessage: 'The last person to walk on the moon was Apollo 17 commander Eugene Cernan on December 14, 1972 🌝'
   },
   {
@@ -78,7 +76,6 @@ const steps: Step[] = [
     ),
     answer: 'TORT',
     answerOnlyNeedsToContain: true,
-    inputType: 'text',
     completionMessage: 'In Japan, "torties" are thought to protect ships from bad storms and shipwrecks, and even ghosts 👻'
   },
   {
@@ -95,7 +92,6 @@ const steps: Step[] = [
     ),
     answer: 'PAUL',
     answerOnlyNeedsToContain: true,
-    inputType: 'text',
     completionMessage: (
       <>
         <p>
@@ -116,7 +112,6 @@ const steps: Step[] = [
       </p>
     ),
     answer: 'DENNIS',
-    inputType: 'text',
     completionMessage: 'You did it!'
   }
 ]
