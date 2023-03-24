@@ -12,7 +12,10 @@ export default function StepPage (): ReactElement {
 
   function submit (): void {
     if ((step.answerOnlyNeedsToContain === true && guess.includes(step.answer)) || guess === step.answer) {
-      void router.replace(`complete?step=${stepNumber}`, new Date().getTime().toString())
+      void router.replace(
+        stepNumber === steps.length - 1 ? '/prize' : `/complete?step=${stepNumber}`,
+        new Date().getTime().toString()
+      )
       return
     }
 

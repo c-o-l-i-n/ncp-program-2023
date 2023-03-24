@@ -12,7 +12,7 @@ export default function Home (): ReactElement {
           width={192}
           height={192}
           priority
-          className='mt-5'
+          className='mt-5 no-border-radius'
         />
 
         <h1 className='has-text-weight-bold'>The Great NCP Program Riddle</h1>

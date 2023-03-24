@@ -10,7 +10,8 @@ interface Step {
 
 const steps: Step[] = [
   {
-    question: <>(QR Code scan in the program)</>,
+    // No question or answer - QR code scan in the physical program
+    question: <></>,
     answer: '',
     completionMessage: "You found the correct QR code! I'm glad you never gave it up! 😉"
   },
@@ -112,7 +113,8 @@ const steps: Step[] = [
       </p>
     ),
     answer: 'DENNIS',
-    completionMessage: 'You did it!'
+    // No completion message - show prize page instead
+    completionMessage: ''
   }
 ]
 

@@ -41,17 +41,25 @@ main {
   @extend .is-flex-grow-1;
   @extend .has-background-white;
   @extend .content;
-}
 
-button, h1, h2 {
-  @extend .has-text-weight-bold
-}
+  button, h1, h2 {
+    @extend .has-text-weight-bold
+  }
 
-.w-100 {
-  width: 100%;
-}
+  .w-100 {
+    width: 100%;
+  }
 
-.pink {
-  font-weight: bold;
-  color: magenta;
+  .pink {
+    font-weight: bold;
+    color: magenta;
+  }
+
+  img {
+    border-radius: 0.5rem;
+
+    &.no-border-radius {
+      border-radius: unset;
+    }
+  }
 }
