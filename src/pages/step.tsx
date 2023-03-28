@@ -36,7 +36,7 @@ export default function StepPage (): ReactElement {
         />
       </div>
 
-      <p className='mt-3'>
+      <p className='mt-4 mb-5'>
         {step.question}
       </p>
 

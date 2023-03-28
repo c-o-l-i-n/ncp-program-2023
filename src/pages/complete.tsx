@@ -34,7 +34,7 @@ export default function CompletePage (): ReactElement {
         />
       </div>
 
-      <p className='mt-3 mb-5'>
+      <p className='mt-4 mb-5'>
         {step.completionMessage}
       </p>
 
