@@ -2,9 +2,6 @@ export function isColor (hex: string, minHue: number, maxHue: number, minSaturat
   const [r, g, b] = hexToRgb(hex)
   const [h, s, l] = rgbToHsl(r, g, b)
 
-  console.log('RGB:', r, g, b)
-  console.log('HSL:', h, s, l)
-
   return h >= minHue && h <= maxHue && s >= minSaturation && l >= minLightness
 }
 
