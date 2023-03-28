@@ -29,7 +29,7 @@ export default function StepPage (): ReactElement {
 
       <Image
         src={step.questionImage}
-        alt={'Step ' + (stepNumber + 1)}
+        alt={`Step ${stepNumber + 1}`}
       />
 
       <p className='mt-3'>

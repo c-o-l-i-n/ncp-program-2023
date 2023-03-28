@@ -16,8 +16,8 @@ import vikings from 'images/vikings.webp'
 interface Step {
   question: ReactElement
   answer: string
-  questionImage: StaticImageData;
-  answerImage: StaticImageData;
+  questionImage: StaticImageData
+  answerImage: StaticImageData
   answerOnlyNeedsToContain?: boolean
   inputType?: HTMLInputTypeAttribute
   completionMessage: string | ReactElement
