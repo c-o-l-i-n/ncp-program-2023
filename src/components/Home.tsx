@@ -1,13 +1,14 @@
 import { ReactElement } from 'react'
 import Image from 'next/image'
 import Footer from './Footer'
+import ncpColorLogo from 'images/ncp-color.svg'
 
 export default function Home (): ReactElement {
   return (
     <>
       <main className='has-text-centered'>
         <Image
-          src='/images/ncp-color.svg'
+          src={ncpColorLogo}
           alt='North Canton Playhouse Logo'
           width={192}
           height={192}

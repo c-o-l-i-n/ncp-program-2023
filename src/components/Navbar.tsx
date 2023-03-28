@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import Image from 'next/image'
+import ncpLogo from 'images/ncp.svg'
 
 export default function Navbar (): ReactElement {
   return (
@@ -11,7 +12,7 @@ export default function Navbar (): ReactElement {
       <div className='navbar-brand ml-5'>
         <div className='navbar-item px-0'>
           <Image
-            src='/images/ncp.svg'
+            src={ncpLogo}
             alt='Logo'
             width={36}
             height={36}
