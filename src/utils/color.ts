@@ -6,7 +6,7 @@ export function isColor (hex: string, minHue: number, maxHue: number, minSaturat
 }
 
 export function isPink (hex: string): boolean {
-  return isColor(hex, 280, 330, 0.5, 0.5)
+  return isColor(hex, 280, 340, 0.5, 0.5)
 }
 
 export function hexToRgb (hex: string): number[] {
