@@ -35,16 +35,13 @@ const steps: Step[] = [
   {
     question: (
       <>
-        <p>
-          The NCP is full of nice people. Never a mean girl in sight! On Wednesdays,
-          we only listen to one <span className='pink'>colorful</span> singer.
-        </p>
-        <p>What day was this singer born?</p>
+        <p>The NCP is full of nice people. Never a mean girl in sight!</p>
+        <p>What color do we wear on Wednesdays?</p>
       </>
     ),
     questionImage: regina,
-    answer: '1979-09-08',
-    inputType: 'date',
+    answer: '', // code uses isPink function because of inputType: 'color', not this answer
+    inputType: 'color',
     answerImage: meanGirls,
     completionMessage: (
       <>
@@ -52,10 +49,8 @@ const steps: Step[] = [
           The NCP&apos;s summer musical for 2023 is <strong>Mean Girls</strong>!
         </p>
         <p>
-          Anyone who has seen Mean Girls knows that on Wednesdays, we wear
-          {' '}<span className='pink'>pink</span>. And since you&apos;re so
-          clever, you know that the singer <span className='pink'>P!NK</span>
-          {' '}was born on September 8th, 1979.
+          Anyone who has seen Mean Girls knows that on Wednesdays,
+          we wear <span className='pink'>pink</span>!
         </p>
       </>
     )

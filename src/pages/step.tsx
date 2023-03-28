@@ -3,6 +3,7 @@ import steps from '@/steps'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { ReactElement, useState } from 'react'
+import { isPink } from '@/utils/color'
 
 export default function StepPage (): ReactElement {
   const router = useRouter()
@@ -12,7 +13,7 @@ export default function StepPage (): ReactElement {
   const step = steps[stepNumber]
 
   function submit (): void {
-    if ((step.answerOnlyNeedsToContain === true && guess.includes(step.answer)) || guess === step.answer) {
+    if ((step.answerOnlyNeedsToContain === true && guess.includes(step.answer)) || (step.inputType === 'color' && isPink(guess)) || guess === step.answer) {
       void router.replace(
         stepNumber === steps.length - 1 ? '/prize' : `/complete?step=${stepNumber}`,
         new Date().getTime().toString()
