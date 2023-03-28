@@ -4,12 +4,14 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRouter } from 'next/router'
 import { ReactElement } from 'react'
+import Image from 'next/image'
 import ConfettiExplosion from 'react-confetti-explosion'
 
 export default function CompletePage (): ReactElement {
   const router = useRouter()
 
   const stepNumber = parseInt(typeof router.query.step === 'string' ? router.query.step : '0')
+  const step = steps[stepNumber]
 
   return (
     <Layout>
@@ -24,8 +26,13 @@ export default function CompletePage (): ReactElement {
         />
       </div>
 
-      <p className='mb-5'>
-        {steps[stepNumber].completionMessage}
+      <Image
+        src={step.answerImage}
+        alt='Great Job!'
+      />
+
+      <p className='mt-3 mb-5'>
+        {step.completionMessage}
       </p>
 
       {

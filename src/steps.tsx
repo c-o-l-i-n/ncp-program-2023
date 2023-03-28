@@ -1,8 +1,23 @@
 import { HTMLInputTypeAttribute, ReactElement } from 'react'
+import { StaticImageData } from 'next/image'
+import cats from 'images/cats.webp'
+import eugene from 'images/eugene.webp'
+import gaston from 'images/gaston.webp'
+import gaston2 from 'images/gaston2.webp'
+import hazel from 'images/hazel.webp'
+import mame from 'images/mame.webp'
+import meanGirls from 'images/mean-girls.webp'
+import nfl from 'images/nfl.webp'
+import regina from 'images/regina.webp'
+import rick from 'images/rick.webp'
+import rotten from 'images/rotten.webp'
+import vikings from 'images/vikings.webp'
 
 interface Step {
   question: ReactElement
   answer: string
+  questionImage: StaticImageData;
+  answerImage: StaticImageData;
   answerOnlyNeedsToContain?: boolean
   inputType?: HTMLInputTypeAttribute
   completionMessage: string | ReactElement
@@ -12,7 +27,9 @@ const steps: Step[] = [
   {
     // No question or answer - QR code scan in the physical program
     question: <></>,
+    questionImage: rick,
     answer: '',
+    answerImage: rick,
     completionMessage: "You found the correct QR code! I'm glad you never gave it up! 😉"
   },
   {
@@ -25,8 +42,10 @@ const steps: Step[] = [
         <p>What day was this singer born?</p>
       </>
     ),
+    questionImage: regina,
     answer: '1979-09-08',
     inputType: 'date',
+    answerImage: meanGirls,
     completionMessage: (
       <>
         <p>
@@ -48,7 +67,9 @@ const steps: Step[] = [
         <p>Who is the rotten egg?</p>
       </>
     ),
+    questionImage: rotten,
     answer: 'EUGENE CERNAN',
+    answerImage: eugene,
     completionMessage: 'The last person to walk on the moon was Apollo 17 commander Eugene Cernan on December 14, 1972 🌝'
   },
   {
@@ -58,7 +79,9 @@ const steps: Step[] = [
         <p>If we are to believe his song, how many eggs did Gaston eat every <em>week</em> when he was a lad?</p>
       </>
     ),
+    questionImage: gaston,
     answer: '336',
+    answerImage: gaston2,
     inputType: 'number',
     completionMessage: "When Gaston was a lad, he ate 4 dozen eggs every morning to help him get large. That's over 3,700 calories! That's enough eggs to feed an entire 18th-century French provincial town 🍳"
   },
@@ -75,8 +98,10 @@ const steps: Step[] = [
         </p>
       </>
     ),
+    questionImage: cats,
     answer: 'TORT',
     answerOnlyNeedsToContain: true,
+    answerImage: hazel,
     completionMessage: 'In Japan, "torties" are thought to protect ships from bad storms and shipwrecks, and even ghosts 👻'
   },
   {
@@ -91,8 +116,10 @@ const steps: Step[] = [
         </p>
       </>
     ),
+    questionImage: nfl,
     answer: 'PAUL',
     answerOnlyNeedsToContain: true,
+    answerImage: vikings,
     completionMessage: (
       <>
         <p>
@@ -112,8 +139,9 @@ const steps: Step[] = [
         ever production in 1976?
       </p>
     ),
+    questionImage: mame,
     answer: 'DENNIS',
-    // No completion message - show prize page instead
+    answerImage: mame,
     completionMessage: ''
   }
 ]

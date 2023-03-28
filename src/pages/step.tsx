@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout'
 import steps from '@/steps'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import { ReactElement, useState } from 'react'
 
 export default function StepPage (): ReactElement {
@@ -26,7 +27,14 @@ export default function StepPage (): ReactElement {
     <Layout>
       <h2>Step {stepNumber + 1}</h2>
 
-      {step.question}
+      <Image
+        src={step.questionImage}
+        alt={'Step ' + (stepNumber + 1)}
+      />
+
+      <p className='mt-3'>
+        {step.question}
+      </p>
 
       <input
         className='input mb-5'
