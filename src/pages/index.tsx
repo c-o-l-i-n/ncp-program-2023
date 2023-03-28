@@ -54,5 +54,5 @@ export default function IndexPage (): ReactElement | undefined {
   }
 
   // Rick Roll if incorrect QR code scan
-  void router.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+  void router.replace('https://www.youtube.com/watch?v=a3Z7zEc7AXQ')
 }
