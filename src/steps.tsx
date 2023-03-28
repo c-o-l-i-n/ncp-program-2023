@@ -30,7 +30,12 @@ const steps: Step[] = [
     questionImage: rick,
     answer: '',
     answerImage: rick,
-    completionMessage: "You found the correct QR code! I'm glad you never gave it up! 😉"
+    completionMessage: (
+      <>
+        <p>You found the correct QR code! I&apos;m glad you never gave it up! 😉</p>
+        <p>There are 7 steps in this riddle. You already passed the 1st! In the coming steps, you may need to do some sleuthing on the World Wide Web! 🕵️</p>
+      </>
+    )
   },
   {
     question: (
