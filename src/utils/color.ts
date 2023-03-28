@@ -1,4 +1,4 @@
-export function isColor(hex: string, minHue: number, maxHue: number, minSaturation: number, minLightness: number): boolean {
+export function isColor (hex: string, minHue: number, maxHue: number, minSaturation: number, minLightness: number): boolean {
   const [r, g, b] = hexToRgb(hex)
   const [h, s, l] = rgbToHsl(r, g, b)
 
@@ -8,11 +8,11 @@ export function isColor(hex: string, minHue: number, maxHue: number, minSaturati
   return h >= minHue && h <= maxHue && s >= minSaturation && l >= minLightness
 }
 
-export function isPink(hex: string): boolean {
+export function isPink (hex: string): boolean {
   return isColor(hex, 280, 330, 0.5, 0.5)
 }
 
-export function hexToRgb(hex: string): number[] {
+export function hexToRgb (hex: string): number[] {
   return [
     hex.substring(1, 3),
     hex.substring(3, 5),
@@ -20,14 +20,18 @@ export function hexToRgb(hex: string): number[] {
   ].map(s => parseInt(s, 16))
 }
 
-export function rgbToHsl(r: number, g: number, b: number): number[] {
-  r /= 255, g /= 255, b /= 255
-  const max = Math.max(r, g, b), min = Math.min(r, g, b)
+export function rgbToHsl (r: number, g: number, b: number): number[] {
+  r /= 255
+  g /= 255
+  b /= 255
+
+  const max = Math.max(r, g, b); const min = Math.min(r, g, b)
+
   let h = (max + min) / 2
   let s = (max + min) / 2
-  let l = (max + min) / 2
+  const l = (max + min) / 2
 
-  if (max == min) {
+  if (max === min) {
     h = s = 0
   } else {
     const d = max - min
