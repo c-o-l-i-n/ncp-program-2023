@@ -27,11 +27,13 @@ export default function StepPage (): ReactElement {
     <Layout>
       <h2>Step {stepNumber + 1}</h2>
 
-      <Image
-        src={step.questionImage}
-        alt={`Step ${stepNumber + 1}`}
-        priority
-      />
+      <div className='is-flex is-justify-content-center'>
+        <Image
+          src={step.questionImage}
+          alt={`Step ${stepNumber + 1}`}
+          priority
+        />
+      </div>
 
       <p className='mt-3'>
         {step.question}

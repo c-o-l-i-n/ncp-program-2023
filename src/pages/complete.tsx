@@ -26,11 +26,13 @@ export default function CompletePage (): ReactElement {
         />
       </div>
 
-      <Image
-        src={step.answerImage}
-        alt='Great Job!'
-        priority
-      />
+      <div className='is-flex is-justify-content-center'>
+        <Image
+          src={step.answerImage}
+          alt='Great Job!'
+          priority
+        />
+      </div>
 
       <p className='mt-3 mb-5'>
         {step.completionMessage}
