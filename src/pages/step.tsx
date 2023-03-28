@@ -30,6 +30,7 @@ export default function StepPage (): ReactElement {
       <Image
         src={step.questionImage}
         alt={`Step ${stepNumber + 1}`}
+        priority
       />
 
       <p className='mt-3'>

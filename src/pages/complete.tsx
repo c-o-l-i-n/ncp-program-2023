@@ -29,6 +29,7 @@ export default function CompletePage (): ReactElement {
       <Image
         src={step.answerImage}
         alt='Great Job!'
+        priority
       />
 
       <p className='mt-3 mb-5'>
