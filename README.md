@@ -2,7 +2,6 @@
 
 <p align="center">A game NCP-goers can play while waiting for their show to start</p>
 
-
 <div align="center">
   <a href="https://github.com/c-o-l-i-n/ncp-program-riddle/actions/workflows/deploy.yml">
     <img alt="Github Build and Deployment Status" src="https://img.shields.io/github/actions/workflow/status/c-o-l-i-n/ncp-program-riddle/deploy.yml?branch=main&logo=github&logoWidth=12">
@@ -38,7 +37,7 @@ Players find a page in the program with 8 QR codes. 7 lead to a [Rickroll](https
 
 [![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Github Pages](https://img.shields.io/badge/Github%20Pages-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://pages.github.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=for-the-badge&logo=Cloudflare%20Pages&logoColor=white)](https://pages.cloudflare.com/)
 
 ## Getting Started
 

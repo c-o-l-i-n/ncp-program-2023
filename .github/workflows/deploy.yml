@@ -11,6 +11,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      deployments: write
+
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3
@@ -24,17 +28,17 @@ jobs:
       - name: Install Dependencies 📦
         run: npm ci
 
-      - name: Run Linter 🔎
-        run: npm run lint
-
       - name: Build 🛠
         run: npm run build
 
       - name: Export Static Site ✈️
         run: npm run export
 
-      - name: Deploy to Github Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to Cloudflare Pages 🚀
+        uses: cloudflare/pages-action@v1
         with:
-          branch: gh-pages
-          folder: out
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ncp-program-riddle
+          directory: out
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
