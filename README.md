@@ -29,7 +29,7 @@
 
 The [North Canton Playhouse](https://www.northcantonplayhouse.com/) is a community theater in North Canton, Ohio. This web application is a game audience members can play while waiting for their show to start.
 
-Players find a page in the program with 8 QR codes. 7 lead to a [Rickroll](https://www.youtube.com/watch?v=a3Z7zEc7AXQ), and 1 leads to Step 2 of the game. The correct QR code changes daily. Players then answer a series of riddle-like questions to win a "prize" at the end.
+Players find a page in the program with 8 QR codes. 7 lead to a [Rickroll](https://www.youtube.com/watch?v=uHgt8giw1LY), and 1 leads to Step 2 of the game. The correct QR code changes daily. Players then answer a series of riddle-like questions to win a "prize" at the end.
 
 [Click here](https://ncp.rocks/complete?step=0) to enter the application, bypassing the Rickrolls.
 
