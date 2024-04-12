@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import spotlight from 'images/spotlight.webp';
+import lesMis from 'images/les-mis.webp';
 
 export default function Hunt(): ReactElement {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function Hunt(): ReactElement {
       <h2>Welcome to Playhouse Pursuit!</h2>
 
       <div className='is-flex is-justify-content-center mb-4'>
-        <Image src={spotlight} alt='' priority />
+        <Image src={lesMis} alt='' priority />
       </div>
 
       <p>
