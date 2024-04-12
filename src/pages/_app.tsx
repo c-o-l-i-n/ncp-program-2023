@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
       </style>
 
       <Head>
-        <title>The Great NCP Program Riddle</title>
+        <title>Playhouse Pursuit</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

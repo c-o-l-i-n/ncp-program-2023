@@ -45,7 +45,7 @@ export default function CompletePage(): ReactElement {
               );
             }}
           >
-            <span>Step {stepNumber + 2}</span>
+            <span>Clue {stepNumber + 2}</span>
             <span className='icon'>
               <FontAwesomeIcon icon={faArrowRight} />
             </span>

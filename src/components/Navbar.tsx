@@ -13,8 +13,8 @@ export default function Navbar(): ReactElement {
         <div className='navbar-item px-0'>
           <Image src={ncpLogo} alt='Logo' width={36} height={36} priority />
         </div>
-        <span className='navbar-item is-size-3 has-text-weight-bold m-1 has-text-white'>
-          Program Riddle
+        <span className='navbar-item is-size-4 has-text-weight-bold m-1 has-text-white'>
+          Playhouse Pursuit
         </span>
       </div>
     </nav>

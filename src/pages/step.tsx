@@ -34,14 +34,12 @@ export default function StepPage(): ReactElement {
 
   return (
     <Layout>
-      <h2>Step {stepNumber + 1}</h2>
+      <h2>
+        Clue {stepNumber + 1} of {steps.length}
+      </h2>
 
       <div className='is-flex is-justify-content-center'>
-        <Image
-          src={step.questionImage}
-          alt={`Step ${stepNumber + 1}`}
-          priority
-        />
+        <Image src={step.questionImage} alt='' priority />
       </div>
 
       <p className='mt-4 mb-5'>{step.question}</p>

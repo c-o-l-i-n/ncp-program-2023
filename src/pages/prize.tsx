@@ -18,7 +18,7 @@ export default function Prize(): ReactElement {
         />
       </div>
 
-      <h3 className='mt-0'>You solved The Great NCP Program Riddle!</h3>
+      <h3 className='mt-0'>You`&apos;ve completed Playhouse Pursuit!</h3>
       <h3 className='mt-0'>Here is your prize:</h3>
 
       <p>
