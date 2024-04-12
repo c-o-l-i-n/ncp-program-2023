@@ -1,10 +1,10 @@
-import Layout from '@/components/Layout'
-import ConfettiExplosion from 'react-confetti-explosion'
-import Image from 'next/image'
-import { ReactElement } from 'react'
-import breadsticks from 'images/breadsticks.webp'
+import Layout from '@/components/Layout';
+import ConfettiExplosion from 'react-confetti-explosion';
+import Image from 'next/image';
+import { ReactElement } from 'react';
+import breadsticks from 'images/breadsticks.webp';
 
-export default function Prize (): ReactElement {
+export default function Prize(): ReactElement {
   return (
     <Layout>
       <h2>🥳 You did it!!</h2>
@@ -21,7 +21,10 @@ export default function Prize (): ReactElement {
       <h3 className='mt-0'>You solved The Great NCP Program Riddle!</h3>
       <h3 className='mt-0'>Here is your prize:</h3>
 
-      <p>Show this coupon to your server to get free unlimited breadsticks with the purchase of a meal when you dine-in at any Olive Garden location 🇮🇹</p>
+      <p>
+        Show this coupon to your server to get free unlimited breadsticks with
+        the purchase of a meal when you dine-in at any Olive Garden location 🇮🇹
+      </p>
       <Image
         src={breadsticks}
         alt='Breadsticks'
@@ -29,9 +32,11 @@ export default function Prize (): ReactElement {
         width={500}
         priority
       />
-      <p className='is-size-7 has-text-grey-lighter'>If you haven&apos;t figured it out yet, this is a joke coupon.</p>
+      <p className='is-size-7 has-text-grey-lighter'>
+        If you haven&apos;t figured it out yet, this is a joke coupon.
+      </p>
 
       <h2 className='has-text-centered'>Enjoy the show!</h2>
     </Layout>
-  )
+  );
 }

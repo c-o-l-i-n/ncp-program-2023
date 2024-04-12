@@ -1,17 +1,19 @@
-import Layout from '@/components/Layout'
-import steps from '@/steps'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useRouter } from 'next/router'
-import { ReactElement } from 'react'
-import Image from 'next/image'
-import ConfettiExplosion from 'react-confetti-explosion'
+import Layout from '@/components/Layout';
+import steps from '@/steps';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
+import Image from 'next/image';
+import ConfettiExplosion from 'react-confetti-explosion';
 
-export default function CompletePage (): ReactElement {
-  const router = useRouter()
+export default function CompletePage(): ReactElement {
+  const router = useRouter();
 
-  const stepNumber = parseInt(typeof router.query.step === 'string' ? router.query.step : '0')
-  const step = steps[stepNumber]
+  const stepNumber = parseInt(
+    typeof router.query.step === 'string' ? router.query.step : '0',
+  );
+  const step = steps[stepNumber];
 
   return (
     <Layout>
@@ -27,33 +29,29 @@ export default function CompletePage (): ReactElement {
       </div>
 
       <div className='is-flex is-justify-content-center'>
-        <Image
-          src={step.answerImage}
-          alt='Great Job!'
-          priority
-        />
+        <Image src={step.answerImage} alt='Great Job!' priority />
       </div>
 
-      <p className='mt-4 mb-5'>
-        {step.completionMessage}
-      </p>
+      <p className='mt-4 mb-5'>{step.completionMessage}</p>
 
-      {
-        stepNumber < steps.length - 1 &&
-          <div className='is-flex is-justify-content-end'>
-            <button
-              className='button is-primary right'
-              onClick={() => {
-                void router.replace(`/step?step=${stepNumber + 1}`, new Date().getTime().toString())
-              }}
-            >
-              <span>Step {stepNumber + 2}</span>
-              <span className='icon'>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </span>
-            </button>
-          </div>
-      }
+      {stepNumber < steps.length - 1 && (
+        <div className='is-flex is-justify-content-end'>
+          <button
+            className='button is-primary right'
+            onClick={() => {
+              void router.replace(
+                `/step?step=${stepNumber + 1}`,
+                new Date().getTime().toString(),
+              );
+            }}
+          >
+            <span>Step {stepNumber + 2}</span>
+            <span className='icon'>
+              <FontAwesomeIcon icon={faArrowRight} />
+            </span>
+          </button>
+        </div>
+      )}
     </Layout>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import { ReactElement } from 'react'
-import Image from 'next/image'
-import ncpLogo from 'images/ncp.svg'
+import { ReactElement } from 'react';
+import Image from 'next/image';
+import ncpLogo from 'images/ncp.svg';
 
-export default function Navbar (): ReactElement {
+export default function Navbar(): ReactElement {
   return (
     <nav
       className='navbar is-primary'
@@ -11,18 +11,12 @@ export default function Navbar (): ReactElement {
     >
       <div className='navbar-brand ml-5'>
         <div className='navbar-item px-0'>
-          <Image
-            src={ncpLogo}
-            alt='Logo'
-            width={36}
-            height={36}
-            priority
-          />
+          <Image src={ncpLogo} alt='Logo' width={36} height={36} priority />
         </div>
-        <span className='navbar-item is-size-3 has-text-weight-bold m-1'>
+        <span className='navbar-item is-size-3 has-text-weight-bold m-1 has-text-white'>
           Program Riddle
         </span>
       </div>
     </nav>
-  )
+  );
 }

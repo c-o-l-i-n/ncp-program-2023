@@ -8,9 +8,9 @@ $family-primary: var(--app-font);
 @import '~bulma/bulma.sass';
 
 // ------------------ Custom Styles ------------------
-
-html, body {
-  height: 100%
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -42,8 +42,10 @@ main {
   @extend .has-background-white;
   @extend .content;
 
-  button, h1, h2 {
-    @extend .has-text-weight-bold
+  button,
+  h1,
+  h2 {
+    @extend .has-text-weight-bold;
   }
 
   .w-100 {

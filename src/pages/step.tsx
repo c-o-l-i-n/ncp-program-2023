@@ -1,27 +1,35 @@
-import Layout from '@/components/Layout'
-import steps from '@/steps'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-import { ReactElement, useState } from 'react'
-import { isPink } from '@/utils/color'
+import Layout from '@/components/Layout';
+import steps from '@/steps';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { ReactElement, useState } from 'react';
+import { isPink } from '@/utils/color';
 
-export default function StepPage (): ReactElement {
-  const router = useRouter()
-  const [guess, setGuess] = useState('')
+export default function StepPage(): ReactElement {
+  const router = useRouter();
+  const [guess, setGuess] = useState('');
 
-  const stepNumber = parseInt(typeof router.query.step === 'string' ? router.query.step : '0')
-  const step = steps[stepNumber]
+  const stepNumber = parseInt(
+    typeof router.query.step === 'string' ? router.query.step : '0',
+  );
+  const step = steps[stepNumber];
 
-  function submit (): void {
-    if ((step.answerOnlyNeedsToContain === true && guess.includes(step.answer)) || (step.inputType === 'color' && isPink(guess)) || guess === step.answer) {
+  function submit(): void {
+    if (
+      (step.answerOnlyNeedsToContain === true && guess.includes(step.answer)) ||
+      (step.inputType === 'color' && isPink(guess)) ||
+      guess === step.answer
+    ) {
       void router.replace(
-        stepNumber === steps.length - 1 ? '/prize' : `/complete?step=${stepNumber}`,
-        new Date().getTime().toString()
-      )
-      return
+        stepNumber === steps.length - 1
+          ? '/prize'
+          : `/complete?step=${stepNumber}`,
+        new Date().getTime().toString(),
+      );
+      return;
     }
 
-    alert('That\'s not it 😕 Try again!')
+    alert("That's not it 😕 Try again!");
   }
 
   return (
@@ -36,18 +44,16 @@ export default function StepPage (): ReactElement {
         />
       </div>
 
-      <p className='mt-4 mb-5'>
-        {step.question}
-      </p>
+      <p className='mt-4 mb-5'>{step.question}</p>
 
       <input
         className='input mb-5'
         type={step.inputType ?? 'text'}
         inputMode={step.inputType === 'number' ? 'numeric' : undefined}
-        onChange={e => setGuess(e.target.value.toUpperCase().trim())}
-        onKeyPress={e => {
+        onChange={(e) => setGuess(e.target.value.toUpperCase().trim())}
+        onKeyPress={(e) => {
           if (e.key === 'Enter') {
-            submit()
+            submit();
           }
         }}
       />
@@ -62,5 +68,5 @@ export default function StepPage (): ReactElement {
         </button>
       </div>
     </Layout>
-  )
+  );
 }

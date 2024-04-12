@@ -1,9 +1,9 @@
-import { ReactElement } from 'react'
-import Image from 'next/image'
-import Footer from './Footer'
-import ncpColorLogo from 'images/ncp-color.svg'
+import { ReactElement } from 'react';
+import Image from 'next/image';
+import Footer from './Footer';
+import ncpColorLogo from 'images/ncp-color.svg';
 
-export default function Home (): ReactElement {
+export default function Home(): ReactElement {
   return (
     <>
       <main className='has-text-centered'>
@@ -22,5 +22,5 @@ export default function Home (): ReactElement {
       </main>
       <Footer />
     </>
-  )
+  );
 }
